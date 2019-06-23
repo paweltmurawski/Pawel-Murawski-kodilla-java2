@@ -1,4 +1,4 @@
-/*
+
 package com.kodilla.spring.portfolio;
 
 
@@ -8,21 +8,23 @@ import org.springframework.context.annotation.Configuration;
 
 @Configuration
 public class BoardConfig {
-    @Autowired
     @Bean(name = "toDoList")
-    public Board getToDoList() {
-        return new Board(taskList);
+    public TaskList getToDoList() {
+        return new TaskList();
+    }
+
+    @Bean(name = "InProgressList")
+    public TaskList getInProgressList() {
+        return new TaskList();
+    }
+
+    @Bean(name = "doneList")
+    public TaskList getDoneList() {
+        return new TaskList();
     }
 
     @Bean
-    public Board getInProgressList() {
-        return new Board(taskList);
+    public Board getTaskList() {
+        return new Board(getToDoList(), getInProgressList(), getDoneList());
     }
-
-    @Bean
-    public Board getDoneList() {
-        return new Board(taskList);
-    }
-
 }
-*/
