@@ -12,7 +12,7 @@ public class TaskFactoryTestSuite {
         Task paintingTask = factory.makeTask(TaskFactory.PAINTINGTASK);
         //Then
         Assert.assertEquals("Nature", paintingTask.getTaskName());
-        Assert.assertTrue(true);
+        Assert.assertEquals("Shopping Task is executed", paintingTask.isTaskExecuted());
     }
 
     @Test

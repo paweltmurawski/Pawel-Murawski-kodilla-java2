@@ -18,7 +18,6 @@ public final class ShoppingTask implements Task{
         System.out.println("Execute shopping task: " + taskName);
     }
 
-
     @Override
     public String getTaskName() {
         return taskName;
