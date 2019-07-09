@@ -1,4 +1,3 @@
-/*
 package com.kodilla.patterns.builder.checkers;
 
 public class Board {
@@ -16,12 +15,16 @@ public class Board {
         return board[x][y];
     }
 
+    public void setFigure(Figure figure, int x, int y) {
+        board[x][y] = figure;
+    }
+
     public String toString() {
         String result = "";
         for(int n = MIN_INDEX; n <= MAX_INDEX; n++) {
             result += "|";
             for (int k = MIN_INDEX; k <= MAX_INDEX; k++) {
-                if(board[n][k]) == null) {
+                if(board[n][k] == null) {
                     result += " ";
                 } else {
                     result += (board[n][k]).getColor().equals(Figure.BLACK) ? "b" : "w";
@@ -34,4 +37,3 @@ public class Board {
         return result;
     }
 }
-*/
